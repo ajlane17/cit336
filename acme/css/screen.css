@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Pangolin', cursive;
+    background-image: url('/acme/images/site/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #f7f09f;
+    font-size: 2vw;
+}
+
+h1 {
+    margin: 10px;
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h2, h3 {
+    margin: 10px;
+}
+
+p {
+    margin: 10px;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: white;
+    max-width: 1300px;
+    min-width: 320px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+
+#sitebrand a {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    margin: 10px;
+}
+
+#sitebrand a img {
+    display: block;
+    height: 100px;
+    width: auto;
+}
+
+#toplinks {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toplinks a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toplinks a, #toplinks a:visited {
+    margin-left: 0.5em;
+    text-decoration: none;
+    color: inherit;
+}
+
+#toplinks a span {
+    display:inline;
+    display:inline-table;
+    display:inline-block;
+    vertical-align:middle;
+    line-height: 20px;
+}
+
+#toplinks a img {
+    margin: 0 5px 0 0;
+    height: 20px;
+    width: auto;
+}
+
+#page-nav {
+    background-color: red;
+    padding: 10px 0 0 0;
+}
+
+#page-nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+nav > ul > li {
+    display: block;
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+#page-nav > ul > li > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 15px 0px;
+    font-size: 2vw;
+}
+
+#page-nav .active {
+    background-color: white;
+}
+
+#page-nav .active {
+    color: red;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#feature {
+    position: relative;
+}
+
+#feature img[alt='Acme rocket'] {
+    width: 100%;
+}
+
+
+#feature  > ul {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    list-style-type: none;
+    color: #990033;
+    height: 100%;
+}
+
+#valueadded {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+section h3 {
+    margin: 10px 0 15px 10px;
+}
+
+section ul {
+    margin-left: 50px;
+}
+
+section table {
+    margin-left: 10px;
+}
+
+.recipes {
+    flex: 1;
+    margin: 10px;
+}
+
+.recipes td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+#reviews {
+    flex: 1;
+    margin: 10px;
+}
+
+footer {
+    border-top: solid black;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.5vw;
+}
+
+form {
+    margin: 10px;
+}
+
+.footnote {
+    margin: 0px;
+    padding: 0px;
+    font-style: italic;
+    font-size: x-small;
+}
+
+input, select {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:required:invalid, input:focus:invalid,
+textarea:required:invalid, textarea:focus:invalid {
+    border-color: red;
+}
+
+input:required:valid, textarea:required:valid {
+    border-color: green;
+}
+
+#invDescription {
+    width: 50%;
+    height: 100px;
+}
+
+input[type=submit], #registerButton {
+    width: 25%;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#registerButton {
+    margin: 10px;
+    text-align: center;
+}
+
+#prodMgmtList > ul {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.productList {
+    border-collapse: collapse;
+    width: 75%;
+}
+
+.productList th {
+    text-align: left;
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+
+.productList td {
+    padding: 10px;
+}
+
+.productList td:first-child {
+    padding-left: 10px;
+}
+
+.productList tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.productList tr:hover {
+    background-color: #ddd;
+}
+
+.buttonColumn {
+    text-align: center;
+}
+
+.listButton {
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 4px;
+    font-size: 1.5vw;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+    padding: 4px 8px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+}
+
+#prod-display{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.updateAccount {
+    border: 2px solid red;
+}
+
+.updateAccount input, label {
+    margin-left: 10px;
+}
+
+#prod-display li{
+    margin-bottom: .5em;
+    border: 1px #ccc solid;
+    list-style-type: none;
+    flex: 1 1 auto;
+}
+
+#prod-display li span {
+    margin-left: 10px;
+}
+
+.imagePlaceholder {
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+#prod-display li img{
+    max-width: 95%;
+    margin: 0;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+#prod-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#prodDetailsImage {
+    flex: 1;
+}
+
+#prodDetailsText {
+    flex: 1;
+}
+
+#prodDetailsImage img {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#prodPrice {
+    font-weight: bolder;
+    color: red;
+    font-size: 3vw;
+}
+
+#image-display {
+    margin: 10px;
+    list-style-type: none;
+}
+
+#image-display img {
+    max-width: 100%;
+    height: auto;
+}
+
+#thumbnailDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnailPlaceholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.thumbnailPlaceholder img{
+    border: solid 1px grey;
+}
+
+@media screen and (min-width: 768px) {
+    #prod-display{
+        margin: 10px;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    #prod-display li{
+        max-width: 200px;
+        flex: 1 0 auto;
+        text-align: center;
+        max-height: 400px;
+    }
+    #prod-details {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    #wrapper {
+        margin: 0 50px;
+    }
+
+    .productList td {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    #wrapper {
+        margin: auto;
+        font-size: 4vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    #page-nav > ul > li > a {
+        font-size: 3vw;
+    }
+
+    #feature img[alt='Acme rocket'] {
+        opacity: 0.5;
+    }
+
+    #valueadded {
+        flex-direction: column-reverse;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    #invDescription {
+        width: 100%;
+    }
+
+    input[type=submit] {
+        width: 50%;
+    }
+
+    .productList {
+        width: 100%;
+    }
+
+    .listButton {
+        font-size: 4vw;
+    }
+
+    .productList td:first-child {
+        width: 75%;
+    }
+
+    #prodPrice {
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #sitebrand a img {
+        height: 60px;
+    }
+
+    #actionbtn {
+        width: 100px;
+    }
+
+    #toplinks {
+        flex-direction: column;
+    }
+}

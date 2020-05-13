@@ -1,0 +1,29 @@
+-- Insert Tony Stark Client
+INSERT INTO clients (clientFirstname, clientLastname, clientEmail, clientPassword, comments)
+VALUES ('Tony', 'Stark', 'tony@starkent.com', 'Iam1ronM@n', 'I am the real Ironman');
+
+-- Update TOny Startk to clientLevel = 3
+UPDATE clients
+   SET clientLevel = 3
+ WHERE clientFirstName = 'Tony'
+   AND clientLastName = 'Stark'
+   AND clientEmail = 'tony@starkent.com';
+
+-- Replace "N/nylon" with "C/climbing" in "N/nylon R/rope"
+UPDATE inventory
+   SET invName = Replace(invName, 'Nylon', 'Climbing'),
+	   invDescription = Replace(invDescription, 'nylon', 'climbing') 
+ WHERE invName LIKE '%Nylon Rope%'
+    OR invDescription LIKE '%nylon rope%';
+
+-- Select "invName" from inventory and "categoryName" from categories that belong
+-- to "Misc" from categories
+SELECT inventory.invName, categories.categoryName
+  FROM inventory
+	   INNER JOIN categories 
+       ON inventory.categoryId = categories.categoryId
+	   WHERE categories.categoryName = 'Misc';
+       
+-- Delete the Koenigsegg CCX car from the database
+DELETE FROM inventory
+WHERE invName = 'Koenigsegg CCX Car';
